@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/peteringram0/babel-console-source",
-  "author": "Peter Ingram <p.ingram@managedracks.co.uk>",
-  "license": "MIT"
+  "author": "Peter Ingram <peter.ingram0@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "webpack --config ./tests/webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "webpack": "^4.16.1",
+    "webpack-command": "^0.4.1"
+  },
+  "dependencies": {}
 }
