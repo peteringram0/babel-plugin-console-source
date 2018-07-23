@@ -1,4 +1,4 @@
-const consoleSource = require("./../index").default;
+const consoleSource = require("./../index");
 
 module.exports = {
     optimization: {

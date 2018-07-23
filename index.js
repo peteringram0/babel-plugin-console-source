@@ -4,7 +4,7 @@
  * @author Peter Ingram
  */
 
-exports.default = () => {
+module.exports = () => {
     return {
         visitor: {
             CallExpression(path, state) {

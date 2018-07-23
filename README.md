@@ -1,5 +1,3 @@
-But shortens file name's
-
 # Babel-plugin-console-source
 Prepends file name and line numbers for each console command, based on the source files.
 
@@ -41,7 +39,7 @@ class Test() {
 
 ### Usage
 
-````javascript
+````bash
 $ yarn add babel-plugin-console-source -D
 ````
 
