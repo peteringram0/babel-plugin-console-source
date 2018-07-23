@@ -1,11 +1,51 @@
-Clone of babel-plugin-captains-log https://www.npmjs.com/package/babel-plugin-captains-log
-
 But shortens file name's
 
-#### Usage
+# Babel-plugin-console-source
+Prepends file name and line numbers for each console command, based on the source files.
+
+##### Before
+````javascript
+// app.js
+class App() {
+    constructor() {
+        console.log('test')
+    }
+}
+
+// test.js
+class Test() {
+    constructor() {
+        console.log('test two')
+    }
+}
+````
+
+##### After
+````javascript
+// app.js
+class App() {
+    constructor() {
+        console.log('app.js (3:8) test')
+    }
+}
+
+// test.js
+class Test() {
+    constructor() {
+        console.log('test.js (3:8) test two')
+    }
+}
+````
+
+
+
+### Usage
+
+````javascript
+$ yarn add babel-plugin-console-source -D
+````
 
 .babelrc
-
 ````json
 {
   "plugins": [
@@ -14,3 +54,9 @@ But shortens file name's
 }
 
 ````
+
+
+
+##### Notes
+
+Inspired by babel-plugin-captains-log https://www.npmjs.com/package/babel-plugin-captains-log
