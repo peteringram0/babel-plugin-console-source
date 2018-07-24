@@ -11,7 +11,7 @@ class App() {
 ↓ ↓ ↓ ↓ ↓ ↓
 class App() {
     constructor() {
-        console.log('app.js', '(3:8) test')
+        console.log('app.js (3:8)', 'test')
     }
 }
 
