@@ -12,14 +12,22 @@ module.exports = {
         filename: "scripts.min.js"
     },
     module: {
-      rules: [
-          {
-              test: /\.js$/,
-              loader: 'babel-loader',
-              query: {
-                  plugins: [consoleSource],
-              }
-          },
-      ]
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                query: {
+
+                    plugins: [consoleSource]
+
+                    // plugins: [
+                    //     [consoleSource, {
+                    //         "fullPath": true
+                    //     }]
+                    // ]
+
+                }
+            },
+        ]
     }
 };

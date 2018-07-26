@@ -37,12 +37,22 @@ class Test() {
 $ yarn add babel-plugin-console-source -D
 ````
 
-.babelrc
+.babelrc (Will append only the file name and line numbers)
 ````json
 {
   "plugins": [
     "console-source"
   ]
 }
+````
 
+.babelrc (Will append the full file path and line numbers)
+````json
+{
+    "plugins": [
+        ["console-source", {
+            "fullPath": true
+        }]
+    ]
+}
 ````
