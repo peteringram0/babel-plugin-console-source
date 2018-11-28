@@ -30,24 +30,15 @@ class Test() {
 ````
 
 
-
 ### Usage
 
 ````bash
 $ yarn add babel-plugin-console-source -D
 ````
 
-.babelrc (Will append only the file name and line numbers)
-````json
-{
-  "plugins": [
-    "console-source"
-  ]
-}
-````
 
-.babelrc (Will append the last 2 path segments and line numbers)
-````json
+.babelrc
+````javascript
 {
     "plugins": [
         ["console-source", {
@@ -61,3 +52,7 @@ $ yarn add babel-plugin-console-source -D
     ]
 }
 ````
+
+### Notes
+
+NPM Install: https://www.npmjs.com/package/babel-plugin-console-source
