@@ -18,13 +18,13 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
 
-                    plugins: [consoleSource]
+                    // plugins: [consoleSource]
 
-                    // plugins: [
-                    //     [consoleSource, {
-                    //         "fullPath": true
-                    //     }]
-                    // ]
+                    plugins: [
+                        [consoleSource, {
+                            "segments": 2
+                        }]
+                    ]
 
                 }
             },

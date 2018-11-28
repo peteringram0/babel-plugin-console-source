@@ -46,12 +46,17 @@ $ yarn add babel-plugin-console-source -D
 }
 ````
 
-.babelrc (Will append the full file path and line numbers)
+.babelrc (Will append the last 2 path segments and line numbers)
 ````json
 {
     "plugins": [
         ["console-source", {
-            "fullPath": true
+        
+            "segments": 1
+            // 0 = full file path (Default)
+            // 1 = file name ONLY
+            // 2 = file name and last segment
+            
         }]
     ]
 }

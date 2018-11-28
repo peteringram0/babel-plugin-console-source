@@ -15,9 +15,10 @@ module.exports = () => {
 
                     let file = state.file.opts.filename;
 
-                    if(!opts || !opts.fullPath) {
+                    if(!opts || opts.segments !== 0) {
                         file = state.file.opts.filename.split("/");
-                        file = file[file.length - 1];
+                        let segs = file.slice(Math.max(file.length - opts.segments));
+                        file = segs.join('/');
                     }
 
                     path.node.arguments.unshift({
