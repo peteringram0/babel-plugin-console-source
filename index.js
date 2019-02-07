@@ -11,7 +11,9 @@ module.exports = () => {
 
                 const opts = state.opts;
 
-                if (path.node.callee.object && path.node.callee.object.name === 'console') {
+                if (path.node.callee.object &&
+                    path.node.callee.object.name === 'console' &&
+                    path.node.callee.property.name !== 'table') {
 
                     let file = state.file.opts.filename;
 

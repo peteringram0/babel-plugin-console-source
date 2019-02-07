@@ -1,7 +1,11 @@
 class Test {
 
     constructor() {
-        console.log('tesing side test');
+        console.log('log');
+        console.warn('warn');
+        console.info('info');
+        console.error('error');
+        console.table(['one', 'two']);
     }
 
 }
