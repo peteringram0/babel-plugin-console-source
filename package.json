@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-console-source",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "index.js",
   "repository": "https://github.com/peteringram0/babel-console-source",
   "author": "Peter Ingram <peter.ingram0@gmail.com>",
