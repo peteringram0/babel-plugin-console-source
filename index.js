@@ -17,7 +17,9 @@ module.exports = () => {
 
                     let file = state.file.opts.filename;
 
-                    if(!opts || opts.segments !== 0) {
+                    if(typeof opts.resolveFile === 'function') {
+                        file = opts.resolveFile(file);
+                    } else if (!opts || opts.segments !== 0) {
                         file = state.file.opts.filename.split("/");
                         let segs = file.slice(Math.max(file.length - opts.segments));
                         file = segs.join('/');
