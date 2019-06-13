@@ -22,7 +22,8 @@ module.exports = {
 
                     plugins: [
                         [consoleSource, {
-                            "segments": 2
+                            "segments": 1,
+                            "splitSegment": "/"
                         }]
                     ]
 

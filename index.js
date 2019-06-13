@@ -20,7 +20,7 @@ module.exports = () => {
                     if(typeof opts.resolveFile === 'function') {
                         file = opts.resolveFile(file);
                     } else if (!opts || opts.segments !== 0) {
-                        file = state.file.opts.filename.split("/");
+                        file = state.file.opts.filename.split(((opts.splitSegment) ? opts.splitSegment : '/'));
                         let segs = file.slice(Math.max(file.length - opts.segments));
                         file = segs.join('/');
                     }
