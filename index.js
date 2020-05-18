@@ -25,10 +25,14 @@ module.exports = () => {
                         file = segs.join('/');
                     }
 
-                    path.node.arguments.unshift({
-                        type: 'StringLiteral',
-                        value: `${file} (${path.node.loc.start.line}:${path.node.loc.start.column})`
-                    });
+                    let value = `${file} (${path.node.loc.start.line}:${path.node.loc.start.column})`
+
+                    if(path.node.arguments[0].value !== value) {
+                        path.node.arguments.unshift({
+                            type: 'StringLiteral',
+                            value
+                        });
+                    }
 
                 }
 

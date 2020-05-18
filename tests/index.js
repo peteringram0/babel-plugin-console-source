@@ -4,6 +4,7 @@ class App {
 
     constructor() {
 
+        Test.a()
         console.log('Testing');
 
         this.main();
